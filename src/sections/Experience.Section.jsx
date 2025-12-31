@@ -7,7 +7,7 @@ export const ExperienceSection = () => {
       role: "Software Developer",
       company: "Kodeinnovate Solution Private Limited",
       description:
-        "Leading the development of flagship product called 'Bakalaa' a ecommerce app",
+        "Leading the development of flagship product called 'Bakalaa' an ecommerce app",
       duration: "2024 - Present",
     },
     {
@@ -25,16 +25,22 @@ export const ExperienceSection = () => {
       duration: "2023 - 2024",
     },
   ];
-
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center overflow-hidden">
-      {/* 1. Metallic Heading */}
-      <div className="w-full max-w-[1400px] mb-10">
+    <section className="relative min-h-screen w-full py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center">
+      <div className="w-full mb-12">
         <h2
-          className="text-6xl font-anek md:text-[10rem] font-bold tracking-tighter
-          bg-clip-text text-transparent select-none filter contrast-125 leading-none"
+          className="text-7xl font-anek md:text-[10rem] font-bold tracking-tighter
+            bg-clip-text text-transparent select-none filter contrast-125"
           style={{
-            backgroundImage: `linear-gradient(135deg, #999999 0%, #ffffff 20%, #999999 40%, #ffffff 50%, #999999 70%, #ffffff 100%)`,
+            backgroundImage: `linear-gradient(
+                135deg,
+                #999999 0%,
+                #ffffff 20%,
+                #999999 40%,
+                #ffffff 50%,
+                #999999 70%,
+                #ffffff 100%
+              )`,
           }}
         >
           EXPERIENCE
@@ -42,11 +48,13 @@ export const ExperienceSection = () => {
       </div>
 
       {/* 2. Timeline Container */}
-      <div className="relative w-full max-w-[1400px]">
-        {/* The Vertical Main Line (Dynamic Height) */}
-        <div className="absolute left-[35%] md:left-[20%] top-0 bottom-0 w-[1px] bg-zinc-800" />
+      <div className="relative w-full">
+        {/* Vertical Line: Positioned to the right of the job titles. 
+              On desktop, it sits at 25% to give the titles room to breathe.
+          */}
+        <div className="absolute left-[30%] md:left-[21.5%] top-0 bottom-0 w-[1px] bg-[#8A8A8A]" />
 
-        <div className="flex flex-col gap-16 md:gap-24">
+        <div className="flex flex-col gap-20 md:gap-32">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -54,11 +62,12 @@ export const ExperienceSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative grid grid-cols-[1fr_auto_3fr] md:grid-cols-[1.5fr_auto_4fr_1fr] items-start gap-4 md:gap-12"
+              // Grid layout: Role | Connector | Company & Description | Date
+              className="relative grid grid-cols-[1.2fr_auto_3fr] md:grid-cols-[1fr_auto_4fr_0.5fr] items-start gap-4 md:gap-10"
             >
-              {/* Left Column: Role Title */}
-              <div className="text-right pt-1">
-                <h3 className="text-lg md:text-2xl font-bold text-zinc-400 leading-tight">
+              {/* Left Column: Role Title - Aligned with the 'E' */}
+              <div className="text-left pt-1">
+                <h3 className="text-sm md:text-2xl font-bold text-[#8A8A8A] font-montserrat leading-tight uppercase tracking-tight">
                   {exp.role.split(" ").map((word, i) => (
                     <span key={i} className="block">
                       {word}
@@ -67,30 +76,30 @@ export const ExperienceSection = () => {
                 </h3>
               </div>
 
-              {/* Middle Column: The Connector Node & Line */}
-              <div className="relative flex items-center justify-center h-full pt-4">
-                {/* Horizontal branch line */}
-                <div className="w-8 md:w-16 h-[1px] bg-zinc-800" />
+              {/* Middle Column: The Connector */}
+              <div className="relative flex items-start justify-center h-full pt-3 md:pt-4">
+                {/* The horizontal dot/line connecting to the vertical spine */}
+                <div className="w-4 md:w-12 h-[1px] bg-[#8A8A8A]" />
               </div>
 
               {/* Right Column: Company Details */}
-              <div className="flex flex-col gap-2">
-                <h4 className="text-xl md:text-3xl font-bold text-white tracking-tight">
+              <div className="flex flex-col gap-3">
+                <h4 className="text-lg font-montserrat md:text-4xl font-bold text-[#D5D5D5] tracking-tight leading-none">
                   {exp.company}
                 </h4>
-                <p className="text-zinc-500 text-sm md:text-lg max-w-xl leading-relaxed">
+                <p className="text-[#8A8A8A] text-xs md:text-lg max-w-2xl leading-relaxed">
                   {exp.description}
                 </p>
 
-                {/* Mobile Date (Visible only on small screens) */}
-                <span className="md:hidden text-zinc-600 text-xs font-medium mt-1">
+                {/* Mobile Date */}
+                <span className="md:hidden font-montserrat text-[#D5D5D5] text-[10px] font-medium mt-1">
                   {exp.duration}
                 </span>
               </div>
 
-              {/* Far Right Column: Date (Desktop only) */}
+              {/* Far Right Column: Date (Desktop) */}
               <div className="hidden md:block text-right pt-2">
-                <span className="text-zinc-600 text-sm font-medium whitespace-nowrap">
+                <span className="text-[#D5D5D5] font-montserrat text-sm font-medium whitespace-nowrap opacity-50">
                   {exp.duration}
                 </span>
               </div>

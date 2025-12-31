@@ -86,33 +86,32 @@ export const ProjectSection = () => {
     },
   ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
+      },
     },
-  },
-};
+  };
 
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.97,
-    filter: "blur(6px)",
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    filter: "blur(0px)",
-    transition: {
-      duration: 0.7,
-      ease: [0.16, 1, 0.3, 1], // ultra-smooth, non-snappy
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.97,
+      filter: "blur(6px)",
     },
-  },
-};
-
+    visible: {
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.7,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
 
   return (
     <section className="relative min-h-screen w-full py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center">
@@ -138,12 +137,11 @@ const cardVariants = {
       </div>
 
       {/* Cards */}
-<motion.div
-  variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, margin: "-80px" }}
-
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-8xl"
       >
         {projects.map((project, idx) => (

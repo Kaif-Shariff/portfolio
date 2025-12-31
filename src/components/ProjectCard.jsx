@@ -1,15 +1,25 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 export const ProjectCard = ({ project }) => {
   const scrollRef = useRef(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
 
-  const scrollTags = (e) => {
-    // Prevent the click from triggering parent card events
-    e.stopPropagation();
+  // Function to check scroll position and toggle arrows
+  const handleScrollIndicators = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 150, behavior: "smooth" });
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setShowLeftArrow(scrollLeft > 10);
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === "left" ? -150 : 150;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
@@ -76,20 +86,35 @@ export const ProjectCard = ({ project }) => {
           </motion.div>
         </div>
 
-        {/* 4. Scrollable Tech Tags Row */}
+        {/* 4. Tech Tags Section */}
         <motion.div
           variants={{
             initial: { opacity: 0, y: 20, height: 0 },
             hover: { opacity: 1, y: 0, height: "auto" },
           }}
           transition={{ delay: 0.05 }}
-          className="relative flex items-center gap-2 mt-3 w-full"
+          className="relative flex items-center gap-1 mt-3 w-full"
         >
+          {/* Left Chevron */}
+          <AnimatePresence>
+            {showLeftArrow && project.tags.length > 3 && (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                onClick={(e) => { e.stopPropagation(); scroll("left"); }}
+                className="flex-shrink-0 p-1 md:p-1.5 bg-zinc-800 border border-zinc-700 text-white rounded-full hover:bg-zinc-700 transition-colors z-10"
+              >
+                <ChevronLeft size={14} />
+              </motion.button>
+            )}
+          </AnimatePresence>
+
           {/* Scroll Container */}
           <div
             ref={scrollRef}
-            className="flex flex-nowrap gap-1.5 md:gap-2 overflow-x-auto no-scrollbar scroll-smooth w-full"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onScroll={handleScrollIndicators}
+            className="flex flex-nowrap gap-1.5 md:gap-2 overflow-x-auto no-scrollbar scroll-smooth w-full px-1"
           >
             {project.tags.map((tag, index) => (
               <span
@@ -101,23 +126,26 @@ export const ProjectCard = ({ project }) => {
             ))}
           </div>
 
-          {/* Chevron Tag Button (Only shows if there are many tags) */}
-          {project.tags.length > 3 && (
-            <button
-              onClick={scrollTags}
-              className="flex-shrink-0 p-1.5 md:p-2 bg-zinc-800 border border-zinc-700 text-white rounded-full hover:bg-zinc-700 transition-colors shadow-md flex items-center justify-center"
-            >
-              <ChevronRight size={16} />
-            </button>
-          )}
+          {/* Right Chevron */}
+          <AnimatePresence>
+            {showRightArrow && project.tags.length > 3 && (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                onClick={(e) => { e.stopPropagation(); scroll("right"); }}
+                className="flex-shrink-0 p-1 md:p-1.5 bg-zinc-800 border border-zinc-700 text-white rounded-full hover:bg-zinc-700 transition-colors z-10"
+              >
+                <ChevronRight size={14} />
+              </motion.button>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
 
-      {/* Tailwind utility for hiding scrollbar (standard in global.css usually) */}
       <style>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
     </motion.div>
   );
