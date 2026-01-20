@@ -44,9 +44,16 @@ export const Navbar = () => {
             >
               Projects
             </a>
+            <span className="h-4 w-px bg-white/20" />
+            <a
+              href="#"
+              className="font-montserrat font-semibold text-[#DCDCDC] text-sm hover:opacity-70 transition-opacity"
+            >
+              Contact
+            </a>
           </div>
 
-          <button
+          {/* <button
             className="
               bg-white
               text-black
@@ -60,10 +67,10 @@ export const Navbar = () => {
             "
           >
             Contact
-          </button>
+          </button> */}
         </div>
 
-        <button
+        {/* <button
           className="
             md:hidden
             bg-white text-black
@@ -77,7 +84,7 @@ export const Navbar = () => {
           "
         >
           Contact
-        </button>
+        </button> */}
       </div>
     </nav>
   );

@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { ContactSection } from "./sections/Contact.Section";
 import { ExperienceSection } from "./sections/Experience.Section";
+import { Footer } from "./sections/Footer";
 import { Hero } from "./sections/Hero.Section";
 import { ProjectSection } from "./sections/Project.section";
 
@@ -15,6 +16,7 @@ export const App = () => {
       <ProjectSection />
       <ExperienceSection />
       <ContactSection />
+      <Footer/>
     </main>
   );
 };
