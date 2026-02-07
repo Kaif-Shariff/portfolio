@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { ExperienceList } from "../components/ExperienceList";
 
 export const ExperienceSection = () => {
   const experiences = [
@@ -7,11 +6,11 @@ export const ExperienceSection = () => {
       role: "Software Developer",
       company: "Kodeinnovate Solution Private Limited",
       description:
-        "Leading the development of flagship product called 'Bakalaa' an ecommerce app",
+        'Leading the development of company\'s flagship ecommerce app called "Bakalaa". A platform to delivery goods and items to doorstep. Also managing the suite of application required to manage and operate the platform',
       duration: "2024 - Present",
     },
     {
-      role: "Software Developer",
+      role: "Frontend Developer",
       company: "Gojaunt",
       description:
         "Managed the development of gojaunt website and mobile app for booking flights and visa application",
@@ -25,87 +24,30 @@ export const ExperienceSection = () => {
       duration: "2023 - 2024",
     },
   ];
+
   return (
-    <section className="relative min-h-screen w-full py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center">
-      <div className="w-full mb-12">
-        <h2
-          className="text-7xl font-anek md:text-[10rem] font-bold tracking-tighter
-            bg-clip-text text-transparent select-none filter contrast-125"
-          style={{
-            backgroundImage: `linear-gradient(
-                135deg,
-                #999999 0%,
-                #ffffff 20%,
-                #999999 40%,
-                #ffffff 50%,
-                #999999 70%,
-                #ffffff 100%
-              )`,
-          }}
-        >
-          EXPERIENCE
-        </h2>
+    <section 
+    id="experience"
+    className="relative min-h-screen w-full py-10 px-6 md:px-12 lg:px-24 flex flex-col items-center">
+      {/* Heading Logic */}
+      <div className="relative z-10 px-2 md:px-4 lg:px-2 w-full ">
+        <div className="flex flex-col items-start bg-[linear-gradient(110deg,#ffffff_0%,#e6e6e6_18%,#9f9f9f_35%,#f5f5f5_55%,#bdbdbd_75%,#ffffff_100%)] bg-clip-text text-transparent">
+          <div className="flex flex-col w-fit overflow-visible pb-6 md:pb-10">
+            <span className="font-birthstone text-[38px] sm:text-[42px] md:text-[60px] self-start mb-[-25px] md:mb-[-28px] ml-[2px] md:ml-[1px] leading-none pb-9">
+              My
+            </span>
+            <h1 className="font-anek font-extrabold uppercase tracking-[-0.05em] text-left leading-none">
+              <span className="block text-[50px] sm:text-[88px] md:text-[90px] leading-[0.8]">
+                Experience
+              </span>
+            </h1>
+          </div>
+        </div>
       </div>
 
-      {/* 2. Timeline Container */}
-      <div className="relative w-full">
-        {/* Vertical Line: Positioned to the right of the job titles. 
-              On desktop, it sits at 25% to give the titles room to breathe.
-          */}
-        <div className="absolute left-[30%] md:left-[21.5%] top-0 bottom-0 w-[1px] bg-[#8A8A8A]" />
-
-        <div className="flex flex-col gap-20 md:gap-32">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              // Grid layout: Role | Connector | Company & Description | Date
-              className="relative grid grid-cols-[1.2fr_auto_3fr] md:grid-cols-[1fr_auto_4fr_0.5fr] items-start gap-4 md:gap-10"
-            >
-              {/* Left Column: Role Title - Aligned with the 'E' */}
-              <div className="text-left pt-1">
-                <h3 className="text-sm md:text-2xl font-bold text-[#8A8A8A] font-montserrat leading-tight uppercase tracking-tight">
-                  {exp.role.split(" ").map((word, i) => (
-                    <span key={i} className="block">
-                      {word}
-                    </span>
-                  ))}
-                </h3>
-              </div>
-
-              {/* Middle Column: The Connector */}
-              <div className="relative flex items-start justify-center h-full pt-3 md:pt-4">
-                {/* The horizontal dot/line connecting to the vertical spine */}
-                <div className="w-4 md:w-12 h-[1px] bg-[#8A8A8A]" />
-              </div>
-
-              {/* Right Column: Company Details */}
-              <div className="flex flex-col gap-3">
-                <h4 className="text-lg font-montserrat md:text-4xl font-bold text-[#D5D5D5] tracking-tight leading-none">
-                  {exp.company}
-                </h4>
-                <p className="text-[#8A8A8A] text-xs md:text-lg max-w-2xl leading-relaxed">
-                  {exp.description}
-                </p>
-
-                {/* Mobile Date */}
-                <span className="md:hidden font-montserrat text-[#D5D5D5] text-[10px] font-medium mt-1">
-                  {exp.duration}
-                </span>
-              </div>
-
-              {/* Far Right Column: Date (Desktop) */}
-              <div className="hidden md:block text-right pt-2">
-                <span className="text-[#D5D5D5] font-montserrat text-sm font-medium whitespace-nowrap opacity-50">
-                  {exp.duration}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+      {/* The List Component - We pass the array here */}
+      <div className="relative w-full px-2 pt-10">
+        <ExperienceList experiences={experiences} />
       </div>
     </section>
   );

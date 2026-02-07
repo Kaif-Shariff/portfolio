@@ -1,73 +1,56 @@
 import LightRays from "../components/LightRays";
-
+import DecryptedText from "../components/DecryptedText";
 export const Hero = () => {
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden"
+    >
+      <div className="absolute top-0 left-0 w-full z-40 px-4 md:px-10 py-4 md:py-6 pointer-events-none">
+        <svg viewBox="0 0 200 30" className="w-45 md:w-55">
+          <defs>
+            <linearGradient
+              id="metallic-hero"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stopColor="#ffffff" />
+              <stop offset="35%" stopColor="#e6e6e6" />
+              <stop offset="65%" stopColor="#bdbdbd" />
+              <stop offset="100%" stopColor="#ffffff" />
+            </linearGradient>
+          </defs>
+          <text
+            x="0"
+            y="22"
+            fill="url(#metallic-hero)"
+            fontWeight="bold"
+            fontSize="20"
+            fontFamily="sans-serif"
+            letterSpacing="-1"
+          >
+            KAIF SHARIFF
+          </text>
+        </svg>
+      </div>
+
       <div className="absolute inset-0 z-0">
         <LightRays
           raysOrigin="top-center"
           raysColor="#f2f2f2"
+          rayLength={20}
           raysSpeed={1.5}
         />
       </div>
 
-      <div className="relative z-10 px-4">
-        <div
-          className="
-      flex flex-col items-center
-      bg-[linear-gradient(110deg,#ffffff_0%,#e6e6e6_18%,#9f9f9f_35%,#f5f5f5_55%,#bdbdbd_75%,#ffffff_100%)]
-      bg-clip-text text-transparent
-    "
-        >
-          <div className="flex flex-col w-fit overflow-visible pb-6 md:pb-10">
-            <span
-              className="
-          font-birthstone
-          text-[32px] sm:text-[42px] md:text-[60px]
-          self-start
-          mb-[-18px] md:mb-[-28px]
-          ml-[-6px] md:ml-[-8px]
-          leading-none
-          pb-5
-          pl-3
-        "
-            >
-              The
-            </span>
-
-            <h1 className="font-anek font-extrabold uppercase tracking-[-0.05em] text-center leading-none">
-              <span className="block text-[56px] sm:text-[88px] md:text-[160px] leading-[0.8]">
-                SOFTWARE
-              </span>
-              <span className="block text-[56px] sm:text-[88px] md:text-[160px] leading-[0.8] -mt-[0.08em]">
-                DEVELOPER
-              </span>
-            </h1>
-
-            <span
-              className="
-          font-birthstone
-          text-[32px] sm:text-[42px] md:text-[60px]
-          self-end
-          mt-[-18px] md:mt-[-30px]
-          mr-[-6px] md:mr-[-10px]
-          leading-none
-          pb-2
-          pt-5
-          pr-5
-        "
-            >
-              you need!
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-1 flex flex-col items-center gap-2 animate-bounce">
-        <div className="border bg-[#101010] font-montserrat border-[#393838] px-4 py-2 rounded-full text-[10px] uppercase tracking-widest">
-          Scroll
-        </div>
-        <div className="w-[1px] h-8 bg-gradient-to-b from-white/50 to-transparent"></div>
+      <div className="relative z-10 px-4 mb-20">
+        <img
+          src="src/assets/headings/title.svg"
+          alt="Software Developer you need"
+          className="w-[85%] sm:w-[70%] md:w-[80%] lg:w-full max-w-300 mx-auto"
+        />
       </div>
     </section>
   );

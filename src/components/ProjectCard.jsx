@@ -35,7 +35,7 @@ export const ProjectCard = ({ project }) => {
 
             {/* Website Tag: Single line alignment */}
             <div 
-              className="shrink-0 px-3 py-1.5 rounded-lg border"
+              className="shrink-0 px-3 py-1.5 rounded-xl border"
               style={{ borderColor: '#393838', backgroundColor: 'rgba(255,255,255,0.05)' }}
             >
               <span className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase">
