@@ -3,7 +3,7 @@ import { ContactSection } from "./sections/Contact.Section";
 import { ExperienceSection } from "./sections/Experience.Section";
 import { Footer } from "./sections/Footer";
 import { Hero } from "./sections/Hero.Section";
-import { ProjectSection } from "./sections/Project.section";
+import { ProjectSection } from "./sections/Project.Section";
 
 export const App = () => {
   return (
