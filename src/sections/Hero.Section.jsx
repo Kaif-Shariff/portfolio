@@ -1,5 +1,7 @@
 import LightRays from "../components/LightRays";
 import DecryptedText from "../components/DecryptedText";
+import titleSVG from "../assets/headings/title.svg";
+
 export const Hero = () => {
   return (
     <section
@@ -47,7 +49,7 @@ export const Hero = () => {
 
       <div className="relative z-10 px-4 mb-20">
         <img
-          src="src/assets/headings/title.svg"
+          src={titleSVG}
           alt="Software Developer you need"
           className="w-[85%] sm:w-[70%] md:w-[80%] lg:w-full max-w-300 mx-auto"
         />

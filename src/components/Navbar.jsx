@@ -2,8 +2,6 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 px-4 md:px-10 py-4 md:py-6">
       <div className="flex items-center justify-between">
-        
-        {/* Spacer instead of logo */}
         <div className="w-45 md:w-55" />
 
         <div className="hidden md:flex items-center gap-4">
