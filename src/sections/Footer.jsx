@@ -1,24 +1,20 @@
 import React from "react";
 
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import instaIcon from "../assets/icons/insta.svg";
-import githubIcon from "../assets/icons/github.svg";
-
 export const Footer = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      icon: linkedinIcon,
+      icon: "public/icons/linkedin.svg",
       href: "https://www.linkedin.com/in/kaif-shariff-67a0921b0/",
     },
     {
       name: "Instagram",
-      icon: instaIcon,
+      icon: "public/icons/insta.svg",
       href: "https://www.instagram.com/_kaif_shariff/",
     },
     {
       name: "Github",
-      icon: githubIcon,
+      icon: "public/icons/github.svg",
       href: "https://github.com/Kaif-Shariff",
     },
   ];
