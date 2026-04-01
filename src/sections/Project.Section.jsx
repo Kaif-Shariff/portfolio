@@ -25,6 +25,16 @@ export const ProjectSection = () => {
       industry: "Tours & Travel",
       type: "Website",
       tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://gojaunt.in/",
+    },
+    {
+      title: "Arbab",
+      description: "A eatery",
+      image: ProjectImages.arbab,
+      industry: "Food & Restaurant",
+      type: "Website",
+      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://bakalaaworkspace.github.io/arbab-cafe/",
     },
     {
       title: "Deal Done Properties",
@@ -34,6 +44,7 @@ export const ProjectSection = () => {
       industry: "Real Estate",
       type: "Website",
       tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://dealdoneproperties.in/",
     },
     {
       title: "Vortexa",
@@ -42,14 +53,7 @@ export const ProjectSection = () => {
       industry: "Service",
       type: "Website",
       tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
-    },
-    {
-      title: "Bakalaa Website",
-      description: "A rock scissors paper game",
-      image: ProjectImages.rps,
-      industry: "Ecommerce",
-      type: "Website",
-      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://vortexa-steel.vercel.app/",
     },
     {
       title: "S1Media",
@@ -59,6 +63,7 @@ export const ProjectSection = () => {
       industry: "Media Agency",
       type: "Website",
       tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://www.s1media.in/",
     },
     {
       title: "RG Movies",
@@ -70,12 +75,13 @@ export const ProjectSection = () => {
       tags: ["ASP.NET", "Tailwind", "SQL"],
     },
     {
-      title: "Rock Paper Scissors",
+      title: "Bakalaa Website",
       description: "A rock scissors paper game",
       image: ProjectImages.rps,
-      industry: "Game",
-      type: "Mobile",
-      tags: ["Java", "XML", "Android SDK", "Figma"],
+      industry: "Ecommerce",
+      type: "Website",
+      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://bakalaa.com/",
     },
     {
       title: "Bakalaa: Grocery in minutes*",
@@ -84,6 +90,7 @@ export const ProjectSection = () => {
       industry: "Ecommerce App",
       type: "Mobile",
       tags: ["Flutter", "Bloc", "Firebase", "Payment Gateway", "SMS Auth"],
+      url: "https://play.google.com/store/apps/details?id=com.quick_commerce.frontend&pcampaignid=web_share",
     },
     {
       title: "S1media App",
@@ -100,15 +107,7 @@ export const ProjectSection = () => {
       industry: "Restaurant Management App",
       type: "Mobile",
       tags: ["Flutter", "Bloc", "Firebase", "Realtime Order Tracking", "REST"],
-    },
-    {
-      title: "Bakalaa Admin",
-      description: "A rock scissors paper game",
-      image: ProjectImages.rps,
-      industry: "CMS",
-      type: "Mobile",
-      tags: ["Flutter", "Bloc", "Firebase", "Realtime Data", "REST"],
-    },
+    }
   ];
 
   useEffect(() => {

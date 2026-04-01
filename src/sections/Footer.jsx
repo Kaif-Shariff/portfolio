@@ -27,9 +27,17 @@ export const Footer = () => {
     <footer className="w-full py-10 px-6 md:px-4 lg:px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left */}
-        <div className="order-2 md:order-1">
+        {/* <div className="order-2 md:order-1">
           <p className="text-zinc-400 font-bold tracking-widest text-sm uppercase">
             Since 2003
+          </p>
+        </div> */}
+        <div className="flex flex-col items-center md:items-start gap-1">
+          <p className="text-white font-bold tracking-tight uppercase">
+            © {new Date().getFullYear()} KAIF SHARIFF
+          </p>
+          <p className="text-zinc-400 font-bold tracking-widest text-xs uppercase">
+            Software Developer • Based in Mumbai
           </p>
         </div>
 

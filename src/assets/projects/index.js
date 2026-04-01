@@ -5,6 +5,7 @@ import gojaunt from "../projects/gojaunt.png";
 import vortexa from "../projects/vortexa.png";
 import rgmovies from "../projects/movie.png";
 import rps from "../projects/rps.jpeg";
+import arbab from "../projects/arbab.jpg";
 
 export const ProjectImages = {
   dealdone,
@@ -13,4 +14,5 @@ export const ProjectImages = {
   vortexa,
   rgmovies,
   rps,
+  arbab,
 };

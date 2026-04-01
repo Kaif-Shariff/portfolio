@@ -5,30 +5,23 @@ export const ExperienceSection = () => {
     {
       role: "Software Developer",
       company: "Kodeinnovate Solution Private Limited",
-      description:
-        'Leading the development of company\'s flagship ecommerce app called "Bakalaa". A platform to delivery goods and items to doorstep. Also managing the suite of application required to manage and operate the platform',
+      description: `Develop and maintain mobile applications for Android and iOS using React Native, focusing on responsive UI and smooth user experience. Manage complex application state using Redux and Zustand based on project requirements to maintain predictable UI behavior and scalable logic. Deploy and maintain applications on the Google Play Store and Apple App Store.`,
       duration: "2024 - Present",
     },
     {
-      role: "Frontend Developer",
+      role: "Junior Software Developer",
       company: "Gojaunt",
       description:
-        "Managed the development of gojaunt website and mobile app for booking flights and visa application",
-      duration: "2024 - 2025",
-    },
-    {
-      role: "Full Stack Developer",
-      company: "Freelancing",
-      description:
-        "Developed numerous website and mobile applications for multiple clients",
+        "I led the development of GoJaunt, a travel and tours platform featuring a React web interface with Framer-driven animations and a cross-platform React Native app that aggregates real-time flight data via the TravelBoutique API and automated visa requirements through the Atlas API.",
       duration: "2023 - 2024",
     },
   ];
 
   return (
-    <section 
-    id="experience"
-    className="relative min-h-screen w-full py-10 px-6 md:px-12 lg:px-24 flex flex-col items-center">
+    <section
+      id="experience"
+      className="relative min-h-screen w-full py-10 px-6 md:px-12 lg:px-24 flex flex-col items-center"
+    >
       {/* Heading Logic */}
       <div className="relative z-10 px-2 md:px-4 lg:px-2 w-full ">
         <div className="flex flex-col items-start bg-[linear-gradient(110deg,#ffffff_0%,#e6e6e6_18%,#9f9f9f_35%,#f5f5f5_55%,#bdbdbd_75%,#ffffff_100%)] bg-clip-text text-transparent">
