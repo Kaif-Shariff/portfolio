@@ -28,15 +28,6 @@ export const ProjectSection = () => {
       url: "https://gojaunt.in/",
     },
     {
-      title: "Arbab",
-      description: "A eatery",
-      image: ProjectImages.arbab,
-      industry: "Food & Restaurant",
-      type: "Website",
-      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
-      url: "https://bakalaaworkspace.github.io/arbab-cafe/",
-    },
-    {
       title: "Deal Done Properties",
       description:
         "Real Estate property showcase and purchase website built for high-end clients.",
@@ -47,13 +38,40 @@ export const ProjectSection = () => {
       url: "https://dealdoneproperties.in/",
     },
     {
-      title: "Vortexa",
-      description: "I.T service provider website",
-      image: ProjectImages.vortexa,
-      industry: "Service",
+      title: "Arbab",
+      description: "A eatery",
+      image: ProjectImages.arbab,
+      industry: "Food & Restaurant",
       type: "Website",
       tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
-      url: "https://vortexa-steel.vercel.app/",
+      url: "https://bakalaaworkspace.github.io/arbab-cafe/",
+    },
+    {
+      title: "Bakalaa Website",
+      description: "A rock scissors paper game",
+      image: ProjectImages.bakalaaWebsite,
+      industry: "Ecommerce",
+      type: "Website",
+      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://bakalaa.com/",
+    },
+    {
+      title: "Bakalaa: Grocery in minutes*",
+      description: "A quick-commerse app which delivers to your doorstep",
+      image: ProjectImages.bakalaa,
+      industry: "Ecommerce App",
+      type: "Mobile",
+      tags: ["Flutter", "Bloc", "Firebase", "Payment Gateway", "SMS Auth"],
+      url: "https://play.google.com/store/apps/details?id=com.quick_commerce.frontend&pcampaignid=web_share",
+    },
+    {
+      title: "Bakalaa Restaurant",
+      description: "A rock scissors paper game",
+      image: ProjectImages.restaurant,
+      industry: "Restaurant Management App",
+      type: "Mobile",
+      tags: ["Flutter", "Bloc", "Firebase", "Realtime Order Tracking", "REST"],
+      url: "https://play.google.com/store/apps/details?id=com.bakalaa_restaurant.app&pcampaignid=web_share",
     },
     {
       title: "S1Media",
@@ -66,6 +84,25 @@ export const ProjectSection = () => {
       url: "https://www.s1media.in/",
     },
     {
+      title: "S1media App",
+      description: "A rock scissors paper game",
+      image: ProjectImages.s1mediaApp,
+      industry: "Business Showcase App",
+      type: "Mobile",
+      tags: ["Flutter", "Figma", "Firebase", "Auth"],
+      url: "https://play.google.com/store/apps/details?id=com.s1media.app&pcampaignid=web_share",
+    },
+    {
+      title: "Vortexa",
+      description: "I.T service provider website",
+      image: ProjectImages.vortexa,
+      industry: "Service",
+      type: "Website",
+      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+      url: "https://vortexa-steel.vercel.app/",
+    },
+
+    {
       title: "RG Movies",
       description:
         "A premium media agency platform focusing on video production and branding.",
@@ -74,40 +111,6 @@ export const ProjectSection = () => {
       type: "Website",
       tags: ["ASP.NET", "Tailwind", "SQL"],
     },
-    {
-      title: "Bakalaa Website",
-      description: "A rock scissors paper game",
-      image: ProjectImages.rps,
-      industry: "Ecommerce",
-      type: "Website",
-      tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
-      url: "https://bakalaa.com/",
-    },
-    {
-      title: "Bakalaa: Grocery in minutes*",
-      description: "A quick-commerse app which delivers to your doorstep",
-      image: ProjectImages.rps,
-      industry: "Ecommerce App",
-      type: "Mobile",
-      tags: ["Flutter", "Bloc", "Firebase", "Payment Gateway", "SMS Auth"],
-      url: "https://play.google.com/store/apps/details?id=com.quick_commerce.frontend&pcampaignid=web_share",
-    },
-    {
-      title: "S1media App",
-      description: "A rock scissors paper game",
-      image: ProjectImages.rps,
-      industry: "Showcase App",
-      type: "Mobile",
-      tags: ["Flutter", "Figma", "Firebase", "Auth"],
-    },
-    {
-      title: "Bakalaa Restaurant",
-      description: "A rock scissors paper game",
-      image: ProjectImages.rps,
-      industry: "Restaurant Management App",
-      type: "Mobile",
-      tags: ["Flutter", "Bloc", "Firebase", "Realtime Order Tracking", "REST"],
-    }
   ];
 
   useEffect(() => {
