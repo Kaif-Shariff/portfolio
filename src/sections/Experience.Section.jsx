@@ -5,15 +5,15 @@ export const ExperienceSection = () => {
     {
       role: "Software Developer",
       company: "Kodeinnovate Solution Private Limited",
-      description: `Develop and maintain mobile applications for Android and iOS using React Native, focusing on responsive UI and smooth user experience. Manage complex application state using Redux and Zustand based on project requirements to maintain predictable UI behavior and scalable logic. Deploy and maintain applications on the Google Play Store and Apple App Store.`,
+      description: `Develop and maintain mobile applications for Android & iOS using React Native/Flutter, focusing on responsive UI and smooth user experience. Manage complex application state using Redux, Zustand, Bloc, GetX or Provider based on project requirements to maintain predictable UI behavior and scalable logic. Deploy and maintain applications on the Google Play Store and Apple App Store.`,
       duration: "2024 - Present",
     },
     {
-      role: "Junior Software Developer",
+      role: "Freelancer",
       company: "Gojaunt",
       description:
         "I led the development of GoJaunt, a travel and tours platform featuring a React web interface with Framer-driven animations and a cross-platform React Native app that aggregates real-time flight data via the TravelBoutique API and automated visa requirements through the Atlas API.",
-      duration: "2023 - 2024",
+      duration: "2025",
     },
   ];
 
